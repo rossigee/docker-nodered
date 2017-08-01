@@ -1,10 +1,4 @@
-FROM ubuntu:xenial
-
-ENV DEBIAN_FRONTEND noninteractive
-
-RUN apt-get update && \
-	apt-get install -y -f nodejs-legacy npm git && \
-	apt-get clean
+FROM node
 
 RUN npm install -g --unsafe-perm \
 	node-red \
